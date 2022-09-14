@@ -5,6 +5,9 @@ var ingredientList = document.getElementById("ingredient-list")
 var recipeOne = document.getElementById("recipe-1");
 var recipeTwo = document.getElementById("recipe-2");
 var recipeThree = document.getElementById("recipe-3");
+var choiceOne = document.getElementById("choice-one");
+var choiceTwo = document.getElementById("choice-two");
+var choiceThree = document.getElementById("choice-three");
 
 
 
@@ -58,6 +61,22 @@ fetch(ingredientsURL).then(function(response) {
     getID(object[0].id)
     })
 }
+ 
+/*
+getIngredients.addEventListener("click", function(event) {
+    event.preventDefault;
+
+    var choiceOne = object[0].id;
+    //var search = searchInput.value.trim()
+    console.log(iD);
+    getiD(iD);
+
+    choiceOne.value = "";
+    
+})
+*/
+
+
 
 
 
