@@ -6,35 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Recipe Finder</title>
 </head>
 <body>
-    <header>
-        <!-- Add home icon/button -->
-        <h1>Recipe Finder</h1>
+    
+    <header class="black white-text">
+        <h1><a href="#"><i class="medium material-icons white-text">home</i></a> Recipe Finder</h1>
     </header>
-
+        
+        
     <main>
         <section class="container">
             <div>
-                <input type="text" class="" id="ingredients" name="ingredients"
-                        placeholder="Ingredients" aria-label="Search">
-                <button class="" id="search-ingredients">Search</button>
+                <input type="text" class="search-input" id="search-input" name="ingredients"
+                        placeholder="Type one ingredient" aria-label="Search">
+                <button class="search-btn" id="search-ingredients"><i class="medium material-icons">search</i></button>
             </div>
 
             <div class="row" id="recipe-preview-cards">
-                <div class="card col m3 custom-card">
-                    <h2>Recipe 1</h2>
-                    <img src="#">
-                </div>
-                <div class="card col m3 custom-card">
-                    <h2>Recipe 2</h2>
-                    <img src="#">
+                <div class="card col m3 custom-card" id="recipe-1">
                 </div>
 
-                <div class="card col m3 custom-card">
-                    <h2>Recipe 3</h2>
-                    <img src="#">
+                <div class="card col m3 custom-card" id="recipe-2">
+                </div>
+
+                <div class="card col m3 custom-card" id="recipe-3">
                 </div>
             </div>
 
