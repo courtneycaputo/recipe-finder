@@ -13,6 +13,11 @@ var imageOne = document.getElementById("image-one"); // added this
 var imageTwo = document.getElementById("image-two"); // added this
 var imageThree = document.getElementById("image-three"); // added this
 
+var recipePreviewEl = document.getElementById("recipe-preview-cards")
+var recipeAndInstructionsElement = document.getElementById("recipe-instruction")
+var backButtonElement = document.getElementById("back-button")
+var homeButtonElement = document.getElementById("home-button")
+
 
 
 // const API_KEY = "1439e62e740141f497d83fcd52f527bf";
@@ -26,6 +31,7 @@ searchButton.addEventListener("click", function(event) {
 var search = searchInput.value.trim()
 console.log(search);
 getSearch(search);
+show(recipePreviewEl) //added function
 
 searchInput.value = "";
 
@@ -145,6 +151,31 @@ function hide(element) {
 function show(element) {
     element.classList.remove("hide")
 }
+
+choiceOne.addEventListener("click", function () {
+    hide(recipePreviewEl);
+    show(recipeAndInstructionsElement)
+});
+
+choiceTwo.addEventListener("click", function () {
+    hide(recipePreviewEl);
+    show(recipeAndInstructionsElement)
+});
+
+choiceThree.addEventListener("click", function () {
+    hide(recipePreviewEl);
+    show(recipeAndInstructionsElement)
+});
+
+backButtonElement.addEventListener("click", function() {
+    hide(recipeAndInstructionsElement)
+    show(recipePreviewEl)
+})
+
+homeButtonElement.addEventListener("click", function(){
+    hide(recipePreviewEl)
+    hide(recipeAndInstructionsElement)
+})
 
 
 
