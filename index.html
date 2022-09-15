@@ -9,50 +9,87 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Recipe Finder</title>
 </head>
-<body>
+<body class="grey lighten-3">
     
-    <header class="black white-text">
+    <header class="hero">
         <h1><a href="#"><i class="medium material-icons white-text">home</i></a> Recipe Finder</h1>
     </header>
         
         
     <main>
-        <section class="container">
-            <div>
-                <input type="text" class="search-input" id="search-input" name="ingredients"
-                        placeholder="Type one ingredient" aria-label="Search">
-                <button class="search-btn" id="search-ingredients"><i class="medium material-icons">search</i></button>
+        <section class="container1">
+            
+            <!-- Ingredient searchbar -->
+            <div class="row">
+                <div class="col m10">
+                    <input type="text" class="search-input spacing" id="search-input" name="ingredients" placeholder="Search for an ingredient to find a recipe" aria-label="Search">
+                </div>
+                <div class="col m2">
+                    <button class="search-btn" id="search-ingredients"><i class="small material-icons">search</i></button>
+                </div>
             </div>
 
+            <!-- Recipe Previews Displayed Upon Search -->
             <div class="row" id="recipe-preview-cards">
-                <div class="card col m3 custom-card"> 
-                    <button class="btn-floating waves-effect waves-light" id="choice-one"><i class="material-icons">add</i></button>
-                    <div id="recipe-1"></div> 
+                
+                <!-- Recipe 1 -->
+                <div class="col m4">
+                    <div class="card">
+                        <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">add</i></a>
+                        <div class="card-image" id="image-one">
+                            
+                        </div>
+                        
+                        <div class="card-content grey darken-3 white-text" id="recipe-1">
+                        </div>
+                                         
+                    </div>
                 </div>
 
-                <div class="card col m3 custom-card">
-                    <button class="btn-floating waves-effect waves-light" id="choice-two"><i class="material-icons">add</i></button>
-                    <div id="recipe-2"></div> 
+                <!-- Recipe 2 -->
+                <div class="col m4">
+                    <div class="card">
+                        <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">add</i></a>
+                        <div class="card-image" id="image-two">       
+                        </div>
+                        
+                        <div class="card-content grey darken-3 white-text" id="recipe-2">
+                        </div>
+                                         
+                    </div>
                 </div>
 
-                <div class="card col m3 custom-card">
-                    <button class="btn-floating waves-effect waves-light" id="choice-three"><i class="material-icons">add</i></button>
-                    <div id="recipe-3"></div> 
+                <!-- Recipe 3 -->
+                <div class="col m4">
+                    <div class="card">
+                        <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">add</i></a>
+                        <div class="card-image" id="image-three">     
+                        </div>
+                        
+                        <div class="card-content grey darken-3 white-text" id="recipe-3">
+                        </div>
+                                         
+                    </div>
                 </div>
+                                
             </div>
 
-            <div class="container" id="recipe-instruction">
-                <div class="container" id="recipe-ingredients">
-                    <h2>Recipe Name</h2>
-                    <h3>Ingredients</h3>
-                    <ul id="ingredient-list">
-                    </ul>
-                </div>
+            <!-- Chosen Recipe Ingredients & Instructions -->
+            <div class="container grey darken-3 white-text" id="recipe-instruction">
+                <h3 class="row" id="recipe-name"></h3>
 
-                <div class="container" id="instructions">
-                    <h3>Instructions</h3>
-                    <p id="instruction-summary"></p>
-                </div>
+                <section class="row">
+                    <div class="container col m6" id="recipe-ingredients">
+                        
+                        <h4>Ingredients</h4>
+                        <ul id="ingredient-list"></ul>
+                    </div>
+
+                    <div class="container col m6" id="instructions">
+                        <h4>Instructions</h4>
+                        <p id="instruction-summary"></p>
+                    </div>
+                </section>
             </div>
 
         </section>
