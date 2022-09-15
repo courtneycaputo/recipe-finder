@@ -13,6 +13,7 @@
     
     <header class="hero">
         <h1><button class="black white-text" id="home-button"><i class="medium material-icons">home</i></button> Recipe Finder</h1>
+                    
     </header>
         
         
@@ -75,27 +76,43 @@
             </div>
 
             <!-- Chosen Recipe Ingredients & Instructions -->
-            <div class="container grey darken-3 white-text hide" id="recipe-instruction">
-                <h3 class="row" id="recipe-name"></h3>
+            <div class="hide" id="recipe-instruction">
+                <div class="grey darken-3 white-text">
+                    <h3 class="row" id="recipe-name"></h3>
 
-                <section class="row">
-                    <div class="container col m6" id="recipe-ingredients">
+                    <section class="row">
+                        <div class="container col m4" id="recipe-ingredients">
+                            
+                            <h4>Ingredients</h4>
+                            <ul id="ingredient-list"></ul>
+                        </div>
+
+                        <div class="container col m4" id="instructions">
+                            <h4>Instructions</h4>
+                            <p id="instruction-summary"></p>
+                        </div>
                         
-                        <h4>Ingredients</h4>
-                        <ul id="ingredient-list"></ul>
-                    </div>
+                        <!-- Alcoholic Beverage -->
+                        <div class="card col m4 grey darken-3" id="drink"></div>
+                    </section>
+                    <button class="btn waves-effect waves-light right black white-text" id="back-button"></i>Go Back</button>
 
-                    <div class="container col m6" id="instructions">
-                        <h4>Instructions</h4>
-                        <p id="instruction-summary"></p>
-                    </div>
-                </section>
-                <button class="btn waves-effect waves-light right black white-text" id="back-button"></i>Go Back</button>
+                    
+            
+
+                </div>
+
+                    
+                    
+                
             </div>
-
+        </div>
         </section>
+
+        
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
