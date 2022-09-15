@@ -15,6 +15,7 @@ var imageThree = document.getElementById("image-three"); // added this
 var idOne;
 var idTwo;
 var idThree;
+var drinks = document.getElementById("drink");
  
 var recipePreviewEl = document.getElementById("recipe-preview-cards")
 var recipeAndInstructionsElement = document.getElementById("recipe-instruction")
@@ -26,6 +27,7 @@ var homeButtonElement = document.getElementById("home-button")
 // const API_KEY = "1439e62e740141f497d83fcd52f527bf";
 //const API_KEY = "a50ea598efc440d3a1a454e5e818fc69";
 const API_KEY = "ea834bbf95a540bdaa02e3de375414eb";
+
 
 
 
@@ -113,6 +115,21 @@ function getID(iD) {
     })
 
 }
+
+
+let ingredientsURL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
+fetch(ingredientsURL).then(function (response) {
+    return response.json()
+}).then 
+    (function (object){
+        console.log(object.drinks[0].strDrink)
+        console.log(object.drinks[0].strDrinkThumb)
+        drinks.innerHTML = `<div class="card-image"><h5 white-text>Try pairing this recipe with a cocktail!</h5><img src="${object.drinks[0].strDrinkThumb}"> <h4 class="card-content white-text center">${object.drinks[0].strDrink}</h4></div>`
+    })
+
+    
+
+
 
 function hide(element) {
     element.classList.add("hide")
