@@ -27,8 +27,8 @@ Ingredients & instructions for chosen recipe
 
 ## Code Screenshots
 <img src="/assets/images/html-screentshot.png">
-<img src="/assets/images/css-screentshot.png">
-<img src="/assets/images/js-screenshot.png">
+<img src="/assets/images/css-screenshot.png">
+<img src="/assets/images/js-screentshot.png">
 
 ## Wireframing
 <img src="/assets/images/mainpage.png">
