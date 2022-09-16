@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,70 +10,81 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Recipe Finder</title>
 </head>
+
 <body class="grey lighten-3">
-    
+
     <header class="hero">
-        <h1><button class="black white-text" id="home-button"><i class="medium material-icons">home</i></button> Recipe Finder</h1>
-                    
+        <h1><button class="black white-text" id="home-button"><i class="medium material-icons">home</i></button> Recipe
+            Finder</h1>
+
     </header>
-        
-        
+
+
     <main>
         <section class="container1">
-            
+
             <!-- Ingredient searchbar -->
-            <div class="row">
-                <div class="col m10">
-                    <input type="text" class="search-input spacing" id="search-input" name="ingredients" placeholder="Search for an ingredient to find a recipe" aria-label="Search">
+            <form>
+                <div class="row">
+                    <div class="col m10">
+                        <input type="text" class="search-input spacing" id="search-input" name="ingredients"
+                            placeholder="Search for an ingredient to find a recipe" aria-label="Search">
+                    </div>
+                    <div class="col m2">
+                        <button class="search-btn" id="search-ingredients"><i
+                                class="small material-icons">search</i></button>
+                    </div>
                 </div>
-                <div class="col m2">
-                    <button class="search-btn" id="search-ingredients"><i class="small material-icons">search</i></button>
-                </div>
-            </div>
+            </form>
+
+            <div id="error"></div>
 
             <!-- Recipe Previews Displayed Upon Search -->
             <div class="row hide" id="recipe-preview-cards">
-                
+
                 <!-- Recipe 1 -->
                 <div class="col m4">
                     <div class="card hoverable">
-                        <a class="btn-floating halfway-fab waves-effect waves-light" id="choice-one"><i class="material-icons">add</i></a>
+                        <a class="btn-floating halfway-fab waves-effect waves-light" id="choice-one"><i
+                                class="material-icons">add</i></a>
                         <div class="card-image" id="image-one">
-                            
+
                         </div>
-                        
+
                         <div class="card-content grey darken-3 white-text" id="recipe-1">
                         </div>
-                                         
+
                     </div>
                 </div>
 
                 <!-- Recipe 2 -->
                 <div class="col m4">
                     <div class="card hoverable">
-                        <a class="btn-floating halfway-fab waves-effect waves-light" id="choice-two"><i class="material-icons">add</i></a>
-                        <div class="card-image" id="image-two">       
+                        <a class="btn-floating halfway-fab waves-effect waves-light" id="choice-two"><i
+                                class="material-icons">add</i></a>
+                        <div class="card-image" id="image-two">
                         </div>
-                        
+
                         <div class="card-content grey darken-3 white-text" id="recipe-2">
                         </div>
-                                         
+
                     </div>
                 </div>
 
                 <!-- Recipe 3 -->
                 <div class="col m4">
                     <div class="card hoverable">
-                        <a class="btn-floating halfway-fab waves-effect waves-light" id="choice-three"><i class="material-icons">add</i></a>
-                        <div class="card-image" id="image-three">     
+                        <a class="btn-floating halfway-fab waves-effect waves-light" id="choice-three"><i
+                                class="material-icons">add</i></a>
+                        <div class="card-image" id="image-three">
                         </div>
-                        
+
                         <div class="card-content grey darken-3 white-text" id="recipe-3">
                         </div>
-                                         
+
                     </div>
                 </div>
-                                
+
             </div>
 
             <!-- Chosen Recipe Ingredients & Instructions -->
@@ -82,7 +94,7 @@
 
                     <section class="row">
                         <div class="container col m4" id="recipe-ingredients">
-                            
+
                             <h4>Ingredients</h4>
                             <ul id="ingredient-list"></ul>
                         </div>
@@ -91,28 +103,30 @@
                             <h4>Instructions</h4>
                             <p id="instruction-summary"></p>
                         </div>
-                        
+
                         <!-- Alcoholic Beverage -->
                         <div class="card col m4 grey darken-3" id="drink"></div>
                     </section>
-                    <button class="btn waves-effect waves-light right black white-text" id="back-button"></i>Go Back</button>
+                    <button class="btn waves-effect waves-light right black white-text" id="back-button"></i>Go
+                        Back</button>
 
-                    
-            
+
+
 
                 </div>
 
-                    
-                    
-                
+
+
+
             </div>
-        </div>
+            </div>
         </section>
 
-        
+
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

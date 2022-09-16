@@ -16,11 +16,12 @@ var idOne;
 var idTwo;
 var idThree;
 var drinks = document.getElementById("drink");
- 
+
 var recipePreviewEl = document.getElementById("recipe-preview-cards")
 var recipeAndInstructionsElement = document.getElementById("recipe-instruction")
 var backButtonElement = document.getElementById("back-button")
 var homeButtonElement = document.getElementById("home-button")
+var errorElement = document.getElementById("error")
 
 
 
@@ -37,7 +38,8 @@ searchButton.addEventListener("click", function (event) {
     var search = searchInput.value.trim()
     console.log(search);
     getSearch(search);
-    show(recipePreviewEl) //added function
+    
+    hide(recipeAndInstructionsElement)
 
     searchInput.value = "";
 
@@ -50,6 +52,15 @@ function getSearch(search) {
     }).then
 
         (function (object) {
+            if(object.length === 0){
+                console.log(object)
+                errorElement.innerHTML = "<div>Nothing found</div>"
+                hide(recipePreviewEl)
+                hide(recipeAndInstructionsElement)
+                return;
+            }
+            errorElement.innerHTML = " "; 
+            show(recipePreviewEl) //added function
             console.log(object);
             recipeOne.textContent = "";
             recipeTwo.textContent = "";
@@ -84,7 +95,7 @@ function getSearch(search) {
             idOne = object[0].id;
             idTwo = object[1].id;
             idThree = object[2].id;
- 
+
         })
 }
 
@@ -116,18 +127,18 @@ function getID(iD) {
 
 }
 
+function getDrinks() {
+    let ingredientsURL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
+    fetch(ingredientsURL).then(function (response) {
+        return response.json()
+    }).then
+        (function (object) {
+            console.log(object.drinks[0].strDrink)
+            console.log(object.drinks[0].strDrinkThumb)
+            drinks.innerHTML = `<div class="card-image"><h5 white-text>Try pairing this recipe with a cocktail!</h5><img src="${object.drinks[0].strDrinkThumb}"> <h4 class="card-content white-text center">${object.drinks[0].strDrink}</h4></div>`
+        })
+}
 
-let ingredientsURL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
-fetch(ingredientsURL).then(function (response) {
-    return response.json()
-}).then 
-    (function (object){
-        console.log(object.drinks[0].strDrink)
-        console.log(object.drinks[0].strDrinkThumb)
-        drinks.innerHTML = `<div class="card-image"><h5 white-text>Try pairing this recipe with a cocktail!</h5><img src="${object.drinks[0].strDrinkThumb}"> <h4 class="card-content white-text center">${object.drinks[0].strDrink}</h4></div>`
-    })
-
-    
 
 
 
@@ -144,9 +155,11 @@ choiceOne.addEventListener("click", function () {
     ingredientList.textContent = " ";
     instructionSummaryElement.innerHTML = " ";
     recipeName.innerHTML = " ";
+    drinks.innerHTML = " ";
     hide(recipePreviewEl);
     getID(idOne);
     show(recipeAndInstructionsElement);
+    getDrinks()
 
 });
 
@@ -154,19 +167,23 @@ choiceTwo.addEventListener("click", function () {
     ingredientList.textContent = " ";
     instructionSummaryElement.innerHTML = " ";
     recipeName.innerHTML = " ";
+    drinks.innerHTML = " ";
     hide(recipePreviewEl);
     getID(idTwo);
     show(recipeAndInstructionsElement)
-    
+    getDrinks()
+
 });
 
 choiceThree.addEventListener("click", function () {
     ingredientList.textContent = " ";
     instructionSummaryElement.innerHTML = " ";
     recipeName.innerHTML = " ";
+    drinks.innerHTML = " ";
     hide(recipePreviewEl);
     getID(idThree);
     show(recipeAndInstructionsElement)
+    getDrinks()
 });
 
 backButtonElement.addEventListener("click", function () {
