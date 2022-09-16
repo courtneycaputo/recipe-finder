@@ -23,7 +23,7 @@ Landing Page where user searches for recipes by ingredient
 <img src="/assets/images/preview-screenshot.png">
 
 Ingredients & instructions for chosen recipe
-<img src="/assets/images/recipe-screenshot">
+<img src="/assets/images/recipe-screenshot.png">
 
 ## Code Screenshots
 <img src="/assets/images/html-screentshot.png">
