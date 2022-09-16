@@ -26,7 +26,7 @@ Ingredients & instructions for chosen recipe
 <img src="/assets/images/recipe-screenshot">
 
 ## Code Screenshots
-<img src="/assets/images/html-screenshot.png">
+<img src="/assets/images/html-screentshot.png">
 <img src="/assets/images/css-screenshot.png">
 <img src="/assets/images/js-screenshot.png">
 
